@@ -8,6 +8,10 @@ const checkCount = (count, backBtn) => {
     }
 };
 
+export const opacity = (sec) => {
+    sec.style.opacity = '1';
+};
+
 export const startOver = (count, backBtn) => {
     count = 0;
     checkCount(count, backBtn);

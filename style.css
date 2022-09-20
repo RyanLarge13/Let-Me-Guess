@@ -15,6 +15,7 @@
 /* Global styles */
 .sec {
     transition: var(--trans-slo);
+    opacity: 0;
 }
 .flex-reg {
     display: flex;
@@ -132,4 +133,18 @@ button:hover {
 }
 .sec-all {
     position: absolute;
+}
+@media (min-width: 400px) and (max-width: 1000px) {
+    h1 {
+        font-size: 3em;
+        text-align: center;
+    }
+    p {
+        scale: .8;
+    }
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
