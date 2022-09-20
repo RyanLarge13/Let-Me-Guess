@@ -135,6 +135,9 @@ button:hover {
     position: fixed;
 }
 @media (min-width: 400px) and (max-width: 1000px) {
+	.alert {
+		width: 75vw;
+	}
     h1 {
         font-size: 3em;
         text-align: center;
