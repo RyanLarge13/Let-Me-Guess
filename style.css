@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+/* Variables */
+:root {
+    --trans-fast: 250ms ease-in-out;
+    --trans-slo: 1s ease-in-out;
+    --mh: 100vh;
+    --mw: 100vw;
+    --purple-shadow: 0 0 .5em 0 purple;
+}
+/* Global styles */
+.flex-reg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.width {
+    height: var(--mh);
+    width: var(--mw);
+}
+.background-img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* toggled styles */
+.alert.show {
+    transform: translateY(0);
+}
+.backdrop.show {
+    opacity: 1;
+}
+/* Begin styling */
+.alert {
+    transform: translateY(-500%);
+    position: absolute;
+    padding: .5em;
+    top: 25%;
+    width: 15vw;
+    height: 10vh;
+    font-size: 1.5em;
+    font-weight: 600;
+    background-color: #fff;
+    border-radius: .25em;
+    transition: var(--trans-fast);
+    z-index: 999;
+    box-shadow: var(--purple-shadow);
+}
+.backdrop {
+    position: absolute;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 998;
+    opacity: 0;
+}
+body {
+    background-image: url('https://images-cdn.welcomesoftware.com/Zz0wZGI4ZTI2NjhlNGQxMWViODVlN2QzNTI0ZjhkZTQyOA==');
+    overflow-x: hidden;
+}
+h1 {
+    font-size: 5em;
+    padding: .5em;
+    transition: var(--trans-slo);
+}
+p {
+    font-weight: 600;
+    font-size: 2em;
+    transition: var(--trans-slo);
+}
+.yes-no {
+    width: 20vw;
+    height: 20vh;
+    transition: var(--trans-slo);
+    margin-top: 2em;
+}
+.yes-no button {
+    font-weight: 600;
+    font-size: 1em;
+    padding: .5em 2em;
+    margin: 0 2em;
+    min-width: 5vw;
+    border-radius: .25em;
+    border: none;
+    outline: none;
+    transition: var(--trans-fast);
+    box-shadow: var(--purple-shadow);
+}
+.yes-no button:hover {
+    cursor: pointer;
+    scale: 1.05;
+    background-color: #000;
+    color: #fff;
+}
+
+/* First section styling */
+.first-sec-h1 {
+    color: #000;
+    transform: translateX(100vw);
+}
+.first-sec-p {
+    transform: translateX(100vw);
+}
