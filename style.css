@@ -132,7 +132,7 @@ button:hover {
     right: -600vw;
 }
 .sec-all {
-    position: absolute;
+    position: fixed;
 }
 @media (min-width: 400px) and (max-width: 1000px) {
     h1 {
