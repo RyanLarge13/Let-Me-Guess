@@ -13,6 +13,9 @@
     --purple-shadow: 0 0 .5em 0 purple;
 }
 /* Global styles */
+.sec {
+    transition: var(--trans-slo);
+}
 .flex-reg {
     display: flex;
     justify-content: center;
@@ -65,7 +68,15 @@
 }
 body {
     background-image: url('https://images-cdn.welcomesoftware.com/Zz0wZGI4ZTI2NjhlNGQxMWViODVlN2QzNTI0ZjhkZTQyOA==');
-    overflow-x: hidden;
+    overflow: hidden;
+}
+.back-btn {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 999;
 }
 h1 {
     font-size: 5em;
@@ -73,6 +84,7 @@ h1 {
     transition: var(--trans-slo);
 }
 p {
+    text-align: center;
     font-weight: 600;
     font-size: 2em;
     transition: var(--trans-slo);
@@ -81,13 +93,12 @@ p {
     width: 20vw;
     height: 20vh;
     transition: var(--trans-slo);
-    margin-top: 2em;
 }
-.yes-no button {
+button {
     font-weight: 600;
     font-size: 1em;
     padding: .5em 2em;
-    margin: 0 2em;
+    margin: 2em 2em 0 2em;
     min-width: 5vw;
     border-radius: .25em;
     border: none;
@@ -95,22 +106,30 @@ p {
     transition: var(--trans-fast);
     box-shadow: var(--purple-shadow);
 }
-.yes-no button:hover {
+button:hover {
     cursor: pointer;
     scale: 1.05;
     background-color: #000;
     color: #fff;
 }
-
-/* First section styling */
-.sec-1 {
+.sec-2 {
+    right: -100vw;
+}
+.sec-3 {
+    right: -200vw;
+}
+.sec-4 {
+    right: -300vw;
+}
+.sec-5 {
+    right: -400vw;
+}
+.sec-6 {
+    right: -500vw;
+}
+.sec-7 {
+    right: -600vw;
+}
+.sec-all {
     position: absolute;
-    transform: translateX(100vw);
-}
-.first-sec-h1 {
-    color: #000;
-    transform: translateX(100vw);
-}
-.first-sec-p {
-    transform: translateX(100vw);
 }

@@ -1,7 +1,19 @@
-import { bringInNext } from "./Javascript/firstpage.js";
+import { bringInNext, bringInPrev, startOver } from "./Javascript/flippages.js";
 
-const yes = document.querySelector('[data-="yes"]');
 const no = document.querySelector('[data-="no"]');
+const backBtn = document.querySelector('.back-btn');
+const NextBtns = document.querySelectorAll('.next');
+const numberToAdd = document.querySelector('.number-to-add');
+const answer = document.querySelector('.answer');
+const restart = document.querySelector('.restart');
+const end = document.querySelector('.end');
+let count = 0;
+
+const calc = () => {
+    numberToAdd.innerHTML = Math.round(Math.random() * 50);
+    answer.innerHTML = numberToAdd.innerHTML / 2;
+};
+calc();
 
 const toggleAlert = () => {
     const alert = document.querySelector('.alert');
@@ -10,23 +22,29 @@ const toggleAlert = () => {
     backdrop.classList.toggle('show');
 };
 
-const beginGame = () => {
-    const heading = document.querySelector('h1');
-    const paragraph = document.querySelector('p');
-    const buttons = document.querySelector('.yes-no');
-    const elemArr = [heading, paragraph, buttons];
-    for (let k = 0; k < elemArr.length; k++) {
-        setTimeout(() => {
-            elemArr[k].style.transform = 'translateX(-100vw)';
-        }, 50 * k);
-    }
-    bringInNext();
-};
-
+end.addEventListener('click', () => {
+    window.close();
+});
+restart.addEventListener('click', () => {
+    startOver(count, backBtn);
+    count = 0;
+    setTimeout(() => {
+        calc();
+    }, 1000);
+});
 no.addEventListener('click', () => {
     toggleAlert();
     setTimeout(() => {
         toggleAlert();
     }, 2000);
 });
-yes.addEventListener('click', beginGame);
+backBtn.addEventListener('click', () => {
+    count--;
+    bringInPrev(count, backBtn);
+});
+NextBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        count++;
+        bringInNext(count, backBtn);
+    });
+});
