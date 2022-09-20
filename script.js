@@ -20,7 +20,7 @@ const beginGame = () => {
             elemArr[k].style.transform = 'translateX(-100vw)';
         }, 50 * k);
     }
-    yes.addEventListener('transitionstart', () => console.log('started'))
+    bringInNext();
 };
 
 no.addEventListener('click', () => {

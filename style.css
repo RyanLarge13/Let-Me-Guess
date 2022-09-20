@@ -103,6 +103,9 @@ p {
 }
 
 /* First section styling */
+.sec-1 {
+    position: absolute;
+}
 .first-sec-h1 {
     color: #000;
     transform: translateX(100vw);
