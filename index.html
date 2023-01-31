@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A fun mind reading game" />
+    <!-- Stylesheet links for the app & from Google fonts -->
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,18 +13,19 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
       rel="stylesheet"
     />
-    <script defer type="module" src="./script.js"></script>
+    <!-- All Javascript tags linking to font awesome and local scripts -->
+    <script type="module" src="./script.js"></script>
     <script
-      defer
       src="https://kit.fontawesome.com/a673862905.js"
       crossorigin="anonymous"
     ></script>
-    <title>Quiz Me</title>
+    <title>Let Me Guess</title>
   </head>
   <body class="background-img flex-reg">
     <button class="back-btn"><i class="fa-solid fa-arrow-left"></i></button>
     <div class="alert flex-reg">Are you sure??</div>
     <div class="backdrop width"></div>
+    <!-- Each section is a new page in the app -->
     <section class="sec-1 width flex-col sec">
       <h1>Can I Guess Your Number?</h1>
       <p>Are you ready to play??</p>
@@ -61,7 +64,8 @@
       <h1>Only two more steps to take..</h1>
       <p>
         Divide the number you have now by 2,<br />
-        and then finally subtract the first number you thought of from the number you have now...
+        and then finally subtract the first number you thought of from the
+        number you have now...
       </p>
       <button class="next">Next</button>
     </section>
